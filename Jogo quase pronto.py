@@ -201,26 +201,26 @@ def atualizar_barra_vida_player():
     #global hp_player
     global barra_vida_player
     #global y_barra_vida_player
-    if hp_player == 0:
+    if hp_player <= 0:
         barra_vida_player=pygame.image.load('Vida/hp_player.png').convert_alpha()
         barra_vida_player=pygame.transform.scale(barra_vida_player,(0,y_barra_vida_player))
     else:
-        hp_player >= 1 and hp_player <= 5
-        barra_vida_player=pygame.image.load('Vida/hp_player.png').convert_alpha()
-        barra_vida_player=pygame.transform.scale(barra_vida_player,(24 * hp_player,y_barra_vida_player))
+        if hp_player >= 1 and hp_player <= 5:
+            barra_vida_player=pygame.image.load('Vida/hp_player.png').convert_alpha()
+            barra_vida_player=pygame.transform.scale(barra_vida_player,(24 * hp_player,y_barra_vida_player))
 
 
 def atualizar_barra_vida_muralha():
     #global hp_player
     global barra_vida
     #global y_barra_vida_player
-    if hp_muralha == 0:
+    if hp_muralha <= 0:
         barra_vida=pygame.image.load('Vida/hp muralha.png').convert_alpha()
         barra_vida=pygame.transform.scale(barra_vida,(0,y_barra_vida))
     else:
-        hp_player >= 1 and hp_player <= 10
-        barra_vida=pygame.image.load('Vida/hp muralha.png').convert_alpha()
-        barra_vida=pygame.transform.scale(barra_vida,(24 * hp_muralha,y_barra_vida))
+        if hp_muralha >= 1 and hp_muralha <= 10:
+            barra_vida=pygame.image.load('Vida/hp muralha.png').convert_alpha()
+            barra_vida=pygame.transform.scale(barra_vida,(24 * hp_muralha,y_barra_vida))
     
 
 
